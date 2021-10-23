@@ -32,7 +32,12 @@
 
 <script>
 import {db} from '../database';
-console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
+//console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
+db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    });
+});
 export default {
   name: 'HelloWorld',
   props: {

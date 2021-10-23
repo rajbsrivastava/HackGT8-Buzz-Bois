@@ -47,7 +47,7 @@ db.collection("users").get().then((querySnapshot) => {
    console.log(result)
  })
 export default {
-  name: 'HelloWorld',
+  name: 'CharityGrid',
   data: function() {
     return {
       items: [

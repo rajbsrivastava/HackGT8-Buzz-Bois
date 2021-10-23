@@ -1,10 +1,19 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
+import CharityGrid from '../components/CharityGrid.vue'
 import Profile from '../components/Profile.vue'
+import Login from '../components/Login.vue'
+import SignUp from '../components/SignUp.vue'
+
 
 const routes = [
   {
-    path: '/', component: HelloWorld
+    path: '/', component: CharityGrid
+  },
+  {
+    path: '/login', component: Login
+  },
+  {
+    path: '/sign-up', component: SignUp
   },
   {
     path: '/about', component: Profile

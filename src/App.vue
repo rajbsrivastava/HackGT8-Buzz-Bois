@@ -29,7 +29,7 @@ export default {
         </q-toolbar-title>
 
         <div class="q-mr-sm">
-          <router-link tag = "button" style="text-decoration: none" to="/SignUp">
+          <router-link tag = "button" style="text-decoration: none" to="/sign-up">
             <q-btn color="primary" label="Sign Up" />
           </router-link> 
         </div>

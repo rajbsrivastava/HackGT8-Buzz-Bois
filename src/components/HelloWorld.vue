@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import {db} from '../database';
+console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
 export default {
   name: 'HelloWorld',
   props: {

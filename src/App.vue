@@ -29,12 +29,12 @@ export default {
         </q-toolbar-title>
 
         <div class="q-mr-sm">
-          <router-link tag = "button" style="text-decoration: none" to="/">
+          <router-link tag = "button" style="text-decoration: none" to="/SignUp">
             <q-btn color="primary" label="Sign Up" />
           </router-link> 
         </div>
         <div class="q-mr-sm">
-          <router-link tag = "button" style="text-decoration: none" to="/about">
+          <router-link tag = "button" style="text-decoration: none" to="/Login">
             <q-btn color="primary" label="Sign In" />
           </router-link> 
         </div>

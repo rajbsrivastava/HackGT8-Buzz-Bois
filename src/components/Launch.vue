@@ -1,7 +1,8 @@
- <template>
-      <div class="home">
-        Profile Info
-      </div>
+<template>
+<q-page class="flex flex-center">
+  <p> profile page rendered here </p>
+
+</q-page>
 </template>
 
 <style>
@@ -28,7 +29,7 @@
 //   console.log(result)
 // })
 export default {
-  name: 'Profile',
+  name: 'Launch',
 //   data: function() {
 //     console.log("whens this called?")
 //     return {

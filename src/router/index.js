@@ -1,22 +1,18 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HelloWorld from '../components/HelloWorld.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+//import HelloWorld from '../components/HelloWorld.vue'
 import Profile from '../components/Profile.vue'
 
 const routes = [
   {
-    path: '/',
-    name: 'Launch',
-    component: HelloWorld
+    path: '/', component: Profile
   },
   {
-    path: '/profile',
-    name: 'Profile',
-    component: Profile
+    path: '/about', component: {template: "<h1>profile or whatever</h1>"}
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes
 })
 

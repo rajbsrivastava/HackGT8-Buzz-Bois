@@ -1,13 +1,13 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-//import HelloWorld from '../components/HelloWorld.vue'
+import HelloWorld from '../components/HelloWorld.vue'
 import Profile from '../components/Profile.vue'
 
 const routes = [
   {
-    path: '/', component: Profile
+    path: '/', component: HelloWorld
   },
   {
-    path: '/about', component: {template: "<h1>profile or whatever</h1>"}
+    path: '/about', component: Profile
   }
 ]
 

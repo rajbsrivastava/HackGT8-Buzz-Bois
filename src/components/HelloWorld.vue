@@ -1,6 +1,4 @@
 <template>
-<q-page class="flex flex-center">
-  <h1> hello world'ing </h1>
   <div class="row container">
     <!--
       In this example every card has a "style" tag with a width.
@@ -24,7 +22,6 @@
     </div>
   </div>
 
-</q-page>
 </template>
 
 <style>
@@ -52,5 +49,17 @@
 // })
 export default {
   name: 'HelloWorld',
+  data: function() {
+    return {
+      items: [
+        {title: "title1", subtitle: "subtitle1", desc: "desc1"},
+        {title: "title2", subtitle: "subtitle2", desc: "desc2"},
+        {title: "title3", subtitle: "subtitle3", desc: "desc3"},
+        {title: "title4", subtitle: "subtitle4", desc: "desc4"},
+        {title: "title5", subtitle: "subtitle5", desc: "desc5"},
+        {title: "title6", subtitle: "subtitle6", desc: "desc6"},
+      ]
+    }
+  }
 }
 </script>

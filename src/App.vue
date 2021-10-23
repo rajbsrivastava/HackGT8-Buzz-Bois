@@ -1,34 +1,55 @@
-<template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <div>
-      <router-view></router-view>
-    </div>
-  </div>
 
 
-</template>
+<script>
+import { ref } from 'vue'
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+export default {
+  name: 'LayoutDefault',
 
-#nav {
-  padding: 30px;
+  components: {
+    
+  },
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  setup () {
+    return {
+      leftDrawerOpen: ref(false)
     }
   }
 }
-</style>
+</script>
+
+
+<template>
+<q-layout view="lHh Lpr lFf">
+    <q-header elevated class="bg-grey-10">
+      <q-toolbar>
+        
+        <q-toolbar-title class = "q-ml-lg">
+          PriorityCharity
+        </q-toolbar-title>
+
+        <div class="q-mr-sm">
+          <router-link tag = "button" to="/">
+            <q-btn color="primary" label="Sign Up" />
+          </router-link> 
+        </div>
+        <div class="q-mr-sm">
+          <router-link tag = "button" to="/about">
+            <q-btn color="primary" label="Sign In" />
+          </router-link> 
+        </div>
+
+        
+      </q-toolbar>
+    </q-header>
+
+    
+
+    <q-page-container>
+      
+      <router-view></router-view>
+    
+    </q-page-container>
+  </q-layout>
+
+</template>

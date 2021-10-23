@@ -1,6 +1,6 @@
 
 <template>
-  <h1>Sign Up</h1>
+  <h1>Login</h1>
 </template>
 
 <script>

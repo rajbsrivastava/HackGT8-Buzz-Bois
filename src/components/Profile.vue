@@ -1,8 +1,6 @@
 <template>
-<q-page class="flex flex-center">
   <p> profile page rendered here </p>
 
-</q-page>
 </template>
 
 <style>
@@ -24,10 +22,10 @@ db.collection("users").get().then((querySnapshot) => {
         console.log(doc.id, " => ", doc.data());
     });
 });
-functions.httpsCallable('helloWorld')().then(function(result) {
-  console.log("Queue cleared!")
-  console.log(result)
-})
+// functions.httpsCallable('helloWorld')().then(function(result) {
+//   console.log("Queue cleared!")
+//   console.log(result)
+// })
 export default {
   name: 'Profile',
   data: function() {

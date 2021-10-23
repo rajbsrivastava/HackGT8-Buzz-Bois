@@ -1,5 +1,5 @@
 <template>
-<q-page class="flex flex-center">
+<div>
   <h1> hello world'ing </h1>
   <div class="row container">
     <!--
@@ -23,8 +23,7 @@
     </q-card>
     </div>
   </div>
-
-</q-page>
+</div>
 </template>
 
 <style>

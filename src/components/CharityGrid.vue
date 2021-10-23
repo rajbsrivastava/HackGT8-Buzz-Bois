@@ -36,6 +36,7 @@
 
 <script>
 import {db, functions} from '../database';
+import { mapGetters } from "vuex";
 //console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
 db.collection("users").get().then((querySnapshot) => {
     querySnapshot.forEach((doc) => {
@@ -47,6 +48,12 @@ db.collection("users").get().then((querySnapshot) => {
    console.log(result)
  })
 export default {
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
+  },
   name: 'CharityGrid',
   data: function() {
     return {

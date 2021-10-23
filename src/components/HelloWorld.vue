@@ -38,13 +38,13 @@
 </style>
 
 <script>
-// import {db, functions} from '../database';
-// //console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
-// db.collection("users").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, " => ", doc.data());
-//     });
-// });
+import {db, functions} from '../database';
+//console.log(db.collection('users').forEach((doc) => console.log(doc.id, " => ", doc.data())));
+db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(doc.id, " => ", doc.data());
+    });
+});
 // functions.httpsCallable('helloWorld')().then(function(result) {
 //   console.log("Queue cleared!")
 //   console.log(result)

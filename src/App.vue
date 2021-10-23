@@ -76,28 +76,16 @@
     </q-drawer>
 
     <q-page-container>
-      <HelloWorld v-bind:items="[
-      {id: '0', title: 'title1', subtitle: 'subtitle1', desc: 'desc1'},
-      {id: '1', title: 'title2', subtitle: 'subtitle2', desc: 'desc2'},
-      {id: '2', title: 'title3', subtitle: 'subtitle3', desc: 'desc3'},
-      {id: '3', title: 'title4', subtitle: 'subtitle4', desc: 'desc4'},
-      {id: '4', title: 'title5', subtitle: 'subtitle5', desc: 'desc5'},
-      {id: '5', title: 'title6', subtitle: 'subtitle6', desc: 'desc6'},
-      {id: '6', title: 'title7', subtitle: 'subtitle7', desc: 'desc7'}]" />
+       <router-view/>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import { ref } from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'LayoutDefault',
-
-  components: {
-    HelloWorld
-  },
 
   setup () {
     return {

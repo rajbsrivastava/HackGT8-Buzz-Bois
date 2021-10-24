@@ -51,12 +51,12 @@ export default {
 
         <template v-if="user.loggedIn">
           <div class="q-mr-sm">
+          <div color = "primary">Welcome, {{user.data.displayName}}!</div>
+        </div>
+          <div class="q-mr-sm q-ml-lg">
           <router-link tag = "button" style="text-decoration: none" to="/login">
             <q-btn @click.prevent="signOut" color="primary" label="Sign Out" />
           </router-link>
-        </div>
-        <div class="q-mr-sm">
-          <q-btn color="primary" label="{{user.data.displayName}}"/>
         </div>
         </template>
 

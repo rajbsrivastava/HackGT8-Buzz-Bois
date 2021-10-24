@@ -94,7 +94,9 @@ export default {
             .updateProfile({
               displayName: this.form.name
             })
-            .then(() => {});
+            .then(() => {
+                this.$router.replace({ path: '/login' });
+            });
         })
         .catch(err => {
           this.error = err.message;

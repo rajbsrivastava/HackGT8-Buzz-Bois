@@ -55,12 +55,6 @@ async function getcards() {
 }
 
 export default {
-  computed: {
-    // map `this.user` to `this.$store.getters.user`
-    ...mapGetters({
-      user: "user"
-    })
-  },
   name: 'CharityGrid',
   async setup() {
     var cards = await getcards();

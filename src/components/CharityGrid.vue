@@ -68,6 +68,7 @@
 import {db, functions} from '../database';
 import { ref } from 'vue'
 const expanded = ref(false)
+import { mapGetters } from "vuex";
 async function getcards() {
   var charities = []
   //await new Promise(resolve => setTimeout(resolve, 1000));

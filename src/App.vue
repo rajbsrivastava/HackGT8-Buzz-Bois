@@ -2,6 +2,7 @@
 
 <script>
 import { ref } from 'vue'
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
 
 export default {
   name: 'LayoutDefault',
@@ -48,8 +49,15 @@ export default {
 
 
     <q-page-container>
-
-      <router-view></router-view>
+      <Suspense>
+      <template #default>
+        <router-view/>
+      </template>
+      <template #fallback>
+        <div style="position: absolute; left: 50%; right: 50%; top: 50%; bottom: 50%"> ...loading...
+        </div>
+      </template>
+      </Suspense>
 
     </q-page-container>
   </q-layout>

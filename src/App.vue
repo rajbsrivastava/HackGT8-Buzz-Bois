@@ -3,8 +3,28 @@
 <script>
 import { ref } from 'vue'
 import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import { mapGetters } from "vuex";
+import firebase from "firebase";
 
 export default {
+  computed: {
+    ...mapGetters({
+// map `this.user` to `this.$store.getters.user`
+      user: "user"
+    })
+  },
+  methods: {
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            path: "/login"
+          });
+        });
+    }
+  },
   name: 'LayoutDefault',
 
   components: {
@@ -29,6 +49,18 @@ export default {
           PriorityCharity
         </q-toolbar-title>
 
+        <template v-if="user.loggedIn">
+          <div class="q-mr-sm">
+          <router-link tag = "button" style="text-decoration: none" to="/login">
+            <q-btn @click.prevent="signOut" color="primary" label="Sign Out" />
+          </router-link>
+        </div>
+        <div class="q-mr-sm">
+          <q-btn color="primary" label="{{user.data.displayName}}"/>
+        </div>
+        </template>
+
+        <template v-else>
         <div class="q-mr-sm">
           <router-link tag = "button" style="text-decoration: none" to="/sign-up">
             <q-btn color="primary" label="Sign Up" />
@@ -39,6 +71,7 @@ export default {
             <q-btn color="primary" label="Sign In" />
           </router-link>
         </div>
+        </template>
 
 
       </q-toolbar>

@@ -1,6 +1,6 @@
-import Vuex from "vuex";
+import {createStore} from "vuex";
 
-export default new Vuex.Store({
+export default createStore({
   state: {
     user: {
       loggedIn: false,

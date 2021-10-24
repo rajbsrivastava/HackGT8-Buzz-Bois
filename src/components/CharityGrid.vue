@@ -43,6 +43,7 @@
 <script>
 import {db, functions} from '../database';
 import { ref } from 'vue'
+import { mapGetters } from "vuex";
 async function getcards() {
   var charities = []
   //await new Promise(resolve => setTimeout(resolve, 1000));
@@ -55,6 +56,12 @@ async function getcards() {
 }
 
 export default {
+  computed: {
+    // map `this.user` to `this.$store.getters.user`
+    ...mapGetters({
+      user: "user"
+    })
+  },
   name: 'CharityGrid',
   async setup() {
     var cards = await getcards();

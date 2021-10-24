@@ -26,7 +26,9 @@ export default {
       <q-toolbar>
 
         <q-toolbar-title class = "q-ml-lg">
+          <router-link style="text-decoration: none; color: inherit" to="/">
           PriorityCharity
+          </router-link>
         </q-toolbar-title>
 
         <div class="q-mr-sm">
